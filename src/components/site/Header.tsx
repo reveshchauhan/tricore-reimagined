@@ -15,19 +15,22 @@ const navLinks = [
 export function Header() {
   const [open, setOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const email = company.emails[0] ?? "";
+  const phone = leadership[0]?.phone ?? "";
 
   return (
     <header className="sticky top-0 z-50">
       <div className="brand-bar text-saffron-foreground">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-6 gap-y-1 px-4 py-2 text-xs font-medium sm:justify-between">
-          <a href={`mailto:${company.emails[0]}`} className="inline-flex items-center gap-2">
+          <a href={`mailto:${email}`} className="inline-flex items-center gap-2">
             <Mail className="size-3.5" aria-hidden="true" />
-            {company.emails[0]}
+            {email}
           </a>
-          <a href={`tel:${leadership[0].phone.replace(/\s/g, "")}`} className="inline-flex items-center gap-2">
+          <a href={`tel:${phone.replace(/\s/g, "")}`} className="inline-flex items-center gap-2">
             <Phone className="size-3.5" aria-hidden="true" />
-            {leadership[0].phone}
+            {phone}
           </a>
+
         </div>
       </div>
 

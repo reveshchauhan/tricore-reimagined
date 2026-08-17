@@ -53,7 +53,7 @@ function ProductsPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-4 py-20">
-        <SectionHeading eyebrow="Our products" title="Explore the catalogue" lead={current?.blurb} />
+        <SectionHeading eyebrow="Our products" title="Explore the catalogue" lead={current?.blurb ?? ""} />
 
         <div className="mt-10 flex flex-wrap gap-3" role="tablist" aria-label="Product categories">
           {productCategories.map((c) => (
