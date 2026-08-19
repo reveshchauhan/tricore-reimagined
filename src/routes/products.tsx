@@ -2,6 +2,13 @@ import { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { SectionHeading } from "@/components/site/SectionHeading";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+
 import { productCategories } from "@/data/products";
 import productsImg from "@/assets/products-flatlay.jpg";
 
