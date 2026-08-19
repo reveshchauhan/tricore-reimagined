@@ -2,6 +2,13 @@ import { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { SectionHeading } from "@/components/site/SectionHeading";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+
 import { productCategories } from "@/data/products";
 import productsImg from "@/assets/products-flatlay.jpg";
 
@@ -74,16 +81,32 @@ function ProductsPage() {
           ))}
         </div>
 
-        <ul className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {current?.items.map((item) => (
-            <li
-              key={item}
-              className="rounded-md border border-border bg-card px-5 py-4 text-sm font-medium text-foreground"
-            >
-              {item}
-            </li>
-          ))}
-        </ul>
+        <TooltipProvider delayDuration={120}>
+          <ul className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {current?.products.map((product) => (
+              <li key={product.slug}>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <button
+                      type="button"
+                      className="w-full cursor-help rounded-md border border-border bg-card px-5 py-4 text-left text-sm font-medium text-foreground transition-colors hover:border-saffron hover:text-saffron focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
+                    >
+                      {product.name}
+                    </button>
+                  </TooltipTrigger>
+                  <TooltipContent side="top" className="max-w-xs">
+                    <p className="font-semibold">{product.name}</p>
+                    <p className="mt-1 text-xs leading-relaxed opacity-90">{product.description}</p>
+                    <p className="mt-1.5 text-xs opacity-75">
+                      Suitable for retail packing and bulk export · packing and specification to buyer requirement.
+                    </p>
+                  </TooltipContent>
+                </Tooltip>
+              </li>
+            ))}
+          </ul>
+        </TooltipProvider>
+
       </section>
 
       <section className="bg-cream py-16">
