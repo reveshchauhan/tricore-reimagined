@@ -2,16 +2,27 @@ import { Link } from "@tanstack/react-router";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { services } from "@/data/services";
 import { company, leadership } from "@/data/company";
+import logoAsset from "@/assets/tricore-logo.png.asset.json";
+
 
 export function Footer() {
   return (
     <footer className="bg-ink text-cream">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-16 md:grid-cols-2 lg:grid-cols-4">
         <div>
-          <p className="font-display text-xl font-extrabold">
+          <img
+            src={logoAsset.url}
+            alt="Tricore Ventures logo"
+            className="h-20 w-auto rounded-md bg-cream p-2"
+            width={160}
+            height={80}
+            loading="lazy"
+          />
+          <p className="mt-4 font-display text-xl font-extrabold">
             <span className="text-saffron">TRICORE</span> <span className="text-cream">VENTURES</span>
           </p>
           <p className="mt-2 text-xs tracking-[0.18em] text-cream/60">{company.tagline.toUpperCase()}</p>
+
           <p className="mt-5 text-sm leading-relaxed text-cream/70">
             An import, export and trading company connecting global markets with quality Indian produce and
             industrial goods.
