@@ -1,15 +1,9 @@
 import { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Package, Globe, Leaf } from "lucide-react";
 import { SectionHeading } from "@/components/site/SectionHeading";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
 
-import { productCategories } from "@/data/products";
+import { productCategories, type Product } from "@/data/products";
 import productsImg from "@/assets/products-flatlay.jpg";
 
 export const Route = createFileRoute("/products")({
@@ -81,32 +75,11 @@ function ProductsPage() {
           ))}
         </div>
 
-        <TooltipProvider delayDuration={120}>
-          <ul className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {current?.products.map((product) => (
-              <li key={product.slug}>
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <button
-                      type="button"
-                      className="w-full cursor-help rounded-md border border-border bg-card px-5 py-4 text-left text-sm font-medium text-foreground transition-colors hover:border-saffron hover:text-saffron focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
-                    >
-                      {product.name}
-                    </button>
-                  </TooltipTrigger>
-                  <TooltipContent side="top" className="max-w-xs">
-                    <p className="font-semibold">{product.name}</p>
-                    <p className="mt-1 text-xs leading-relaxed opacity-90">{product.description}</p>
-                    <p className="mt-1.5 text-xs opacity-75">
-                      Suitable for retail packing and bulk export · packing and specification to buyer requirement.
-                    </p>
-                  </TooltipContent>
-                </Tooltip>
-              </li>
-            ))}
-          </ul>
-        </TooltipProvider>
-
+        <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {current?.products.map((product) => (
+            <ProductCard key={product.slug} product={product} />
+          ))}
+        </ul>
       </section>
 
       <section className="bg-cream py-16">
@@ -127,5 +100,73 @@ function ProductsPage() {
         </div>
       </section>
     </>
+  );
+}
+
+function ProductCard({ product }: { product: Product }) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <li
+      className="group relative flex flex-col"
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
+    >
+      <button
+        type="button"
+        aria-expanded={open}
+        className="w-full rounded-md border border-border bg-card px-5 py-4 text-left text-sm font-semibold text-foreground transition-colors hover:border-saffron hover:text-saffron focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
+      >
+        {product.name}
+      </button>
+
+      <div
+        className={`z-10 mt-2 overflow-hidden rounded-lg border border-saffron/20 bg-cream p-4 shadow-lg transition-all duration-300 ease-out ${
+          open ? "max-h-[600px] opacity-100 translate-y-0" : "max-h-0 opacity-0 -translate-y-2 pointer-events-none"
+        }`}
+      >
+        <h3 className="text-base font-bold text-foreground">{product.name}</h3>
+        <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{product.description}</p>
+
+        {product.specs.length > 0 && (
+          <div className="mt-4">
+            <p className="text-xs font-semibold uppercase tracking-wider text-saffron">Key specifications</p>
+            <dl className="mt-2 grid grid-cols-2 gap-x-4 gap-y-1.5 text-xs">
+              {product.specs.slice(0, 4).map((spec) => (
+                <div key={spec.label} className="flex justify-between gap-2">
+                  <dt className="text-muted-foreground">{spec.label}</dt>
+                  <dd className="font-medium text-foreground">{spec.value}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        )}
+
+        {product.applications.length > 0 && (
+          <div className="mt-4 flex flex-wrap gap-2">
+            {product.applications.slice(0, 3).map((app) => (
+              <span
+                key={app}
+                className="inline-flex items-center gap-1 rounded-full border border-border bg-background px-2 py-1 text-[10px] font-medium text-foreground"
+              >
+                <Leaf className="size-3 text-leaf" aria-hidden="true" />
+                {app}
+              </span>
+            ))}
+          </div>
+        )}
+
+        <div className="mt-4 flex flex-col gap-2 border-t border-border pt-3 text-xs text-muted-foreground">
+          <span className="inline-flex items-center gap-1.5">
+            <Package className="size-3.5 text-saffron" aria-hidden="true" />
+            Retail packing & bulk export available
+          </span>
+          <span className="inline-flex items-center gap-1.5">
+            <Globe className="size-3.5 text-navy" aria-hidden="true" />
+            Specifications matched to buyer destination
+          </span>
+        </div>
+      </div>
+    </li>
   );
 }
