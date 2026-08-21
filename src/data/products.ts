@@ -4,6 +4,15 @@ import pulsesImg from "@/assets/cat-pulses.jpg";
 import grainsImg from "@/assets/cat-grains.jpg";
 import spicesImg from "@/assets/cat-spices.jpg";
 import seedsImg from "@/assets/cat-seeds-nuts.jpg";
+import oilImg from "@/assets/cat-oil.jpg";
+import oilseedsImg from "@/assets/cat-oilseeds.jpg";
+import feedImg from "@/assets/cat-animalfeed.jpg";
+import flourImg from "@/assets/cat-wheatflour.jpg";
+import milkImg from "@/assets/cat-milkpowder.jpg";
+import cannedImg from "@/assets/cat-cannedfood.jpg";
+import freshImg from "@/assets/cat-freshproduce.jpg";
+import machineryImg from "@/assets/hero-machinery.jpg";
+import equipmentImg from "@/assets/hero-equipment.jpg";
 
 export type Spec = { label: string; value: string };
 
