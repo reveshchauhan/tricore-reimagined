@@ -75,7 +75,47 @@ function ProductsPage() {
           ))}
         </div>
 
-        <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {current ? (
+          <div className="mt-10 grid gap-8 overflow-hidden rounded-xl border border-border bg-card shadow-card lg:grid-cols-2">
+            <img
+              src={current.image}
+              alt={current.label}
+              width={1200}
+              height={800}
+              loading="lazy"
+              className="h-64 w-full object-cover lg:h-full"
+            />
+            <div className="p-8">
+              <h2 className="font-display text-2xl font-extrabold text-foreground">{current.label}</h2>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{current.intro}</p>
+              <dl className="mt-6 space-y-3 text-sm">
+                <div>
+                  <dt className="text-xs font-semibold uppercase tracking-wider text-saffron">Origins</dt>
+                  <dd className="mt-1 text-muted-foreground">{current.origin}</dd>
+                </div>
+                <div>
+                  <dt className="text-xs font-semibold uppercase tracking-wider text-saffron">Packing options</dt>
+                  <dd className="mt-1 flex flex-wrap gap-2">
+                    {current.packing.map((p) => (
+                      <span
+                        key={p}
+                        className="rounded-full border border-border px-3 py-1 text-xs text-foreground"
+                      >
+                        {p}
+                      </span>
+                    ))}
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        ) : null}
+
+        <p className="mt-10 text-sm text-muted-foreground">
+          Hover any product to see its description, specifications and export details.
+        </p>
+
+        <ul className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {current?.products.map((product) => (
             <ProductCard key={product.slug} product={product} />
           ))}

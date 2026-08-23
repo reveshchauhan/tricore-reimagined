@@ -4,7 +4,7 @@ export const company = {
   promise: "Connecting Markets. Building Trust. Delivering Value.",
   address:
     "Cabin No-005, Ground Floor, India Accelerator Building, 336-Udyog Vihar, Phase-4 Road, Gurugram, Haryana, India - 122015",
-  emails: ["mstricoreventures@gmail.com", "sales@tricoreventures.net"],
+  emails: ["sales@tricoreventures.net", "mstricoreventures@gmail.com"],
   website: "www.tricoreventures.org",
 };
 
