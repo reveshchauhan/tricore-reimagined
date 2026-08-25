@@ -13,6 +13,12 @@ import cannedImg from "@/assets/cat-cannedfood.jpg";
 import freshImg from "@/assets/cat-freshproduce.jpg";
 import machineryImg from "@/assets/hero-machinery.jpg";
 import equipmentImg from "@/assets/hero-equipment.jpg";
+import floursImg from "@/assets/cat-flours.jpg";
+import jaggeryImg from "@/assets/cat-jaggery.jpg";
+import teaCoffeeImg from "@/assets/cat-tea-coffee.jpg";
+import herbalImg from "@/assets/cat-herbal.jpg";
+import frozenImg from "@/assets/cat-frozen.jpg";
+import saltImg from "@/assets/cat-salt.jpg";
 
 export type Spec = { label: string; value: string };
 
