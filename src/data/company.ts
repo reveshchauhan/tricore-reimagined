@@ -9,24 +9,14 @@ export const company = {
 };
 
 export const leadership = [
+  
   {
-    name: "Sayed Hasan Ahmad",
-    role: "Chief Managing Director",
-    phone: "+91 94154 19028",
-    email: "sales@tricoreventures.net",
-  },
-  {
-    name: "Mohd John",
+    name: "NAME",
     role: "Managing Director",
-    phone: "+91 90053 05110",
+    phone: "+91 89533 35110",
     email: "sales@tricoreventures.net",
   },
-  {
-    name: "Syed Hasan",
-    role: "Global Sales Head",
-    phone: "+91 84004 72323",
-    email: "mstricoreventures@gmail.com",
-  },
+  
 ];
 
 export const stats = [

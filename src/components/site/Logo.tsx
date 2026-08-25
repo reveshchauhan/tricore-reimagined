@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import logoAsset from "@/assets/tricore-logo.png.asset.json";
+import logo from "@/assets/logo.jpg";
 
 export function Logo({ inverted = false }: { inverted?: boolean }) {
   return (
@@ -10,7 +10,7 @@ export function Logo({ inverted = false }: { inverted?: boolean }) {
         }`}
       >
         <img
-          src={logoAsset.url}
+          src={logo}
           alt="Tricore Ventures logo"
           className="size-12 object-contain"
           width={48}
