@@ -16,7 +16,7 @@ export function Header() {
   const [open, setOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const email = company.emails[0] ?? "";
-  const phone = leadership[0]?.phone ?? "";
+  
 
   return (
     <header className="sticky top-0 z-50">
@@ -26,10 +26,11 @@ export function Header() {
             <Mail className="size-3.5" aria-hidden="true" />
             {email}
           </a>
-          <a href={`tel:${phone.replace(/\s/g, "")}`} className="inline-flex items-center gap-2">
+          <a href="tel:+918953335110" className="inline-flex items-center gap-2">
             <Phone className="size-3.5" aria-hidden="true" />
-            {phone}
+            +91 89533 35110
           </a>
+
 
         </div>
       </div>
