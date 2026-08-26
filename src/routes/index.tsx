@@ -76,7 +76,7 @@ function HeroSlider() {
             to="/products"
             className="inline-flex items-center gap-2 rounded-full border border-cream/40 px-7 py-3.5 text-sm font-semibold text-cream transition-colors hover:border-saffron hover:text-saffron"
           >
-            Browse Export Catalogue
+            Catalogue
           </Link>
         </div>
 

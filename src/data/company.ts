@@ -4,18 +4,32 @@ export const company = {
   promise: "Connecting Markets. Building Trust. Delivering Value.",
   address:
     "Cabin No-005, Ground Floor, India Accelerator Building, 336-Udyog Vihar, Phase-4 Road, Gurugram, Haryana, India - 122015",
-  emails: ["sales@tricoreventures.net", "mstricoreventures@gmail.com"],
+  emails: ["sales@tricoreventures.net", "mstricoreventures@hotmail.com"],
   website: "www.tricoreventures.org",
 };
 
 export const leadership = [
   
   {
-    name: "NAME",
-    role: "Managing Director",
-    phone: "+91 89533 35110",
-    email: "sales@tricoreventures.net",
+    name: "Sayed Hasan Ahmad",
+    role: "Co-Founder & CEO",
+    phone: "+91 94154 19028",
+    email: "syedhasan.365@hotmail.com",
   },
+
+  {
+    name: "Mohammad John",
+    role: "Co-Founder & Managing Director",
+    phone: "+91 90053 05110",
+    email: "mdtricoreventures@gmail.com",
+  },
+
+  {
+    name: "Syed Hasan",
+    role: "Global Sales Head ",
+    phone: "+91 84004 72323",
+    email: " sales@tricoreventures.net",
+  }
   
 ];
 

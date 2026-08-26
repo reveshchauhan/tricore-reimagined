@@ -70,7 +70,7 @@ const categoryInputs: CategoryInput[] = [
     intro:
       "Tricore Ventures supplies the full spectrum of Indian and South-East Asian rice — long-grain aromatic basmati, parboiled sella, steam and raw white grades, plus broken rice for industrial buyers. Every lot is sortex-cleaned, moisture-controlled and shipped against agreed specification.",
     image: riceImg,
-    origin: "India (Haryana, Punjab, Uttar Pradesh, Andhra Pradesh) · Pakistan · Thailand · Vietnam",
+    origin: "India (Haryana, Punjab, Uttar Pradesh, Andhra Pradesh) · Thailand · Vietnam",
     packing: [
       "1 kg / 5 kg / 10 kg consumer packs",
       "25 kg / 50 kg PP or jute bags",
@@ -113,8 +113,6 @@ const categoryInputs: CategoryInput[] = [
       { name: "Andhra Korutla Rice", description: "Regional South Indian raw rice with soft cooking characteristics and traditional flavour." },
       { name: "Matta Rice", description: "Kerala red parboiled rice with a coarse texture, earthy taste and high nutritional value." },
       { name: "100% Broken Rice", description: "Fully broken kernels used by breweries, snack manufacturers, starch plants and feed producers." },
-      { name: "Super Kernel Basmati Rice", description: "Premium Pakistani-origin basmati with exceptionally long, slender kernels and strong natural aroma." },
-      { name: "386 Pak Premium Rice", description: "Pakistani long-grain non-basmati with excellent whiteness and consistent milling quality." },
       { name: "IRRI-6, 5% Broken Rice", description: "Long-grain white rice with 5% broken content — a widely traded commodity grade." },
       { name: "IRRI-9, 5% Broken Rice", description: "Firm-textured long-grain white rice at 5% broken, suitable for volume distribution." },
       { name: "IRRI-6, 25% Broken Rice", description: "Economy grade long-grain white rice at 25% broken for high-volume institutional buyers." },

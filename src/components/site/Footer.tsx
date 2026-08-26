@@ -24,8 +24,11 @@ export function Footer() {
           <p className="mt-2 text-xs tracking-[0.18em] text-cream/60">{company.tagline.toUpperCase()}</p>
 
           <p className="mt-5 text-sm leading-relaxed text-cream/70">
-            An import, export and trading company connecting global markets with quality Indian produce and
-            industrial goods.
+            An international import, export and trading company connecting businesses and markets across the world.<br></br>
+
+            We facilitate seamless trade to and from India, as well as between countries worldwide, helping businesses source, supply and move quality products across borders.
+            <br></br>
+            With our global trading expertise and strong understanding of international markets, we bridge opportunities across geographies—making cross-border trade simpler, more reliable and more efficient
           </p>
         </div>
 
@@ -88,14 +91,8 @@ export function Footer() {
               </li>
             ))}
             <li className="flex gap-3">
-              <Phone className="mt-0.5 size-4 shrink-0 text-saffron" aria-hidden="true" />
-              <span className="flex flex-col gap-1">
-                {leadership.map((l) => (
-                  <a key={l.phone} href={`tel:${l.phone.replace(/\s/g, "")}`} className="hover:text-saffron">
-                    {l.phone}
-                  </a>
-                ))}
-              </span>
+              <Phone className="mt-0.5 size-4 shrink-0 text-saffron" aria-hidden="true"/>
+              <a href="tel:+918953335110" className="hover:text-saffron"> +91 89533 35110 </a>
             </li>
           </ul>
         </div>

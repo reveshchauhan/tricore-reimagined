@@ -79,7 +79,7 @@ export const tradeCapabilities = [
   },
   {
     title: "Trading",
-    body: "Back-to-back trading and origin-flexible sourcing across India, Pakistan, Thailand, Vietnam, Brazil and the Gulf.",
+    body: "Back-to-back trading and origin-flexible sourcing across India, Thailand, Vietnam, Brazil and the Gulf.",
   },
 ];
 

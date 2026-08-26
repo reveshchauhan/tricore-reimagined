@@ -103,9 +103,9 @@ function AboutPage() {
 
       <section className="mx-auto max-w-7xl px-4 py-20">
         <SectionHeading eyebrow="Leadership" title="Our Leadership Team" align="center" />
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
+        <div className="mt-14 flex flex-wrap justify-center gap-6">
           {leadership.map((l) => (
-            <div key={l.name} className="rounded-lg border border-border p-8 text-center">
+            <div key={l.name} className="w-full max-w-sm rounded-lg border border-border p-8 text-center">
               <span className="mx-auto grid size-14 place-items-center rounded-full brand-bar font-display text-lg font-extrabold text-saffron-foreground">
                 {l.name
                   .split(" ")
