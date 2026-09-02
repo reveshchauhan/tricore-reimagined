@@ -19,6 +19,9 @@ import teaCoffeeImg from "@/assets/cat-tea-coffee.jpg";
 import herbalImg from "@/assets/cat-herbal.jpg";
 import frozenImg from "@/assets/cat-frozen.jpg";
 import saltImg from "@/assets/cat-salt.jpg";
+import paperImg from "@/assets/cat-paper.jpg";
+import steelImg from "@/assets/cat-steel.jpg";
+import bitumenImg from "@/assets/cat-bitumen.jpg";
 
 export type Spec = { label: string; value: string };
 
@@ -1094,6 +1097,153 @@ const categoryInputs: CategoryInput[] = [
       { name: "Safety & PPE Supplies", description: "Helmets, gloves, boots, harnesses and site safety equipment in bulk cartons." },
       { name: "Pipes, Valves & Fittings", description: "MS, GI, HDPE and stainless pipes with valves and fittings to project BOQ." },
       { name: "Construction Materials", description: "Cement, TMT steel bars, scaffolding and formwork supplied for project requirements." },
+    ],
+  },
+  {
+    id: "paper",
+    label: "Paper & Paper Products",
+    blurb: "Copier paper, kraft, duplex board and packaging paper for bulk export.",
+    intro:
+      "Writing, printing, packaging and tissue paper supplied in reams, reels and pallets — copier paper, kraft liner, duplex board, newsprint and hygiene grades — with GSM, brightness and reel-width matched to buyer specification.",
+    image: paperImg,
+    origin: "India · Indonesia · Thailand · Europe · Middle East",
+    packing: [
+      "500-sheet reams in 5-ream cartons",
+      "Shrink-wrapped pallets",
+      "Reels on pallets with edge protection",
+      "Container-loaded FCL and LCL",
+    ],
+    applications: [
+      "Printing and stationery",
+      "Corrugation and packaging plants",
+      "Publishing and newsprint",
+      "Hygiene and tissue converting",
+    ],
+    baseSpecs: [
+      { label: "GSM range", value: "45 – 400 GSM as per grade" },
+      { label: "Brightness", value: "80 – 104 ISO (grade dependent)" },
+      { label: "Moisture", value: "5% ± 1%" },
+      { label: "Reel width", value: "Cut to buyer requirement" },
+      { label: "Certification", value: "FSC / ISO options available" },
+      { label: "Trade terms", value: "FOB / CFR / CIF" },
+    ],
+    highlights: [
+      "Mill-direct sourcing with grade certificates",
+      "GSM, brightness and size cut to order",
+      "Moisture-protected export packing",
+    ],
+    items: [
+      { name: "A4 Copier Paper (70–80 GSM)", description: "Bright multipurpose copier paper in 70, 75 and 80 GSM, packed 500 sheets per ream for retail and bulk export." },
+      { name: "A3 Copier Paper", description: "Large-format office and printing paper with high brightness and smooth runnability." },
+      { name: "Maplitho / Offset Paper", description: "Uncoated woodfree printing paper for books, notebooks and commercial offset printing." },
+      { name: "Coated Art Paper & Board", description: "Gloss and matt coated grades for brochures, catalogues and premium packaging." },
+      { name: "Kraft Paper", description: "High-BF kraft liner and semi-kraft reels for corrugated box manufacturing." },
+      { name: "Duplex Board", description: "Grey-back and white-back duplex board for folding cartons and FMCG packaging." },
+      { name: "Newsprint Paper", description: "Standard 42–48.8 GSM newsprint reels for newspaper and flyer printing." },
+      { name: "Tissue & Hygiene Paper", description: "Jumbo tissue reels and converted napkins, facial and toilet rolls." },
+      { name: "Corrugated Boxes & Cartons", description: "3-ply and 5-ply export cartons printed and sized to buyer requirement." },
+      { name: "Paper Cups & Food Board", description: "PE-coated food-grade board and finished paper cups for foodservice buyers." },
+      { name: "Thermal & Bond Paper Rolls", description: "POS thermal rolls and bond paper reels in standard widths." },
+      { name: "Waste Paper / OCC", description: "Sorted OCC, ONP and mixed waste paper bales supplied to recycling mills." },
+    ],
+  },
+  {
+    id: "steel",
+    label: "Steel & Metals",
+    blurb: "TMT bars, coils, plates, pipes and structural steel for projects worldwide.",
+    intro:
+      "Ferrous and non-ferrous metals for construction and manufacturing — TMT rebar, HR and CR coils, GI sheets, plates, structural sections, pipes and billets — supplied against mill test certificates with third-party inspection on request.",
+    image: steelImg,
+    origin: "India · China · Turkey · UAE · CIS",
+    packing: [
+      "Bundled and strapped with steel bands",
+      "Coils on skids, edge and eye protected",
+      "Seaworthy packing with anti-rust coating",
+      "Bulk vessel or FCL container loading",
+    ],
+    applications: [
+      "Construction and infrastructure",
+      "Fabrication and structural works",
+      "Oil, gas and water pipelines",
+      "Manufacturing and engineering",
+    ],
+    baseSpecs: [
+      { label: "Standards", value: "IS / ASTM / EN / JIS grades" },
+      { label: "Certification", value: "Mill test certificate with each lot" },
+      { label: "Inspection", value: "SGS / BV third-party on request" },
+      { label: "Tolerance", value: "As per applicable standard" },
+      { label: "Minimum order", value: "25 MT (negotiable)" },
+      { label: "Trade terms", value: "FOB / CFR / CIF / DAP" },
+    ],
+    highlights: [
+      "Mill-direct and stockist sourcing",
+      "Mill test certificates and third-party inspection",
+      "Bulk vessel and container shipments handled",
+    ],
+    items: [
+      { name: "TMT Rebar (Fe500 / Fe550)", description: "Ribbed thermo-mechanically treated bars from 8 mm to 40 mm for RCC construction." },
+      { name: "Hot Rolled (HR) Coils & Sheets", description: "HR coils and cut sheets for fabrication, pipe making and general engineering." },
+      { name: "Cold Rolled (CR) Coils & Sheets", description: "Smooth-finish CR coils for appliances, drums, panels and automotive parts." },
+      { name: "Galvanised (GI) Coils & Sheets", description: "Zinc-coated coils and plain/corrugated sheets for roofing and ducting." },
+      { name: "Pre-Painted (PPGI) Sheets", description: "Colour-coated steel sheets for roofing, cladding and pre-engineered buildings." },
+      { name: "MS Plates", description: "Mild steel plates in a range of thicknesses for structural and heavy fabrication." },
+      { name: "Structural Sections (Angles, Channels, Beams)", description: "ISMB, ISMC, angles and joists for structural steel and shed fabrication." },
+      { name: "MS & GI Pipes", description: "ERW black and galvanised pipes for water, scaffolding and structural use." },
+      { name: "Seamless & API Line Pipes", description: "Seamless and API 5L pipes for oil, gas and high-pressure applications." },
+      { name: "Stainless Steel Coils, Sheets & Pipes", description: "SS 202, 304 and 316 grades for food, chemical and architectural applications." },
+      { name: "Wire Rods & Binding Wire", description: "Low-carbon wire rod coils and annealed binding wire for construction." },
+      { name: "Billets, Blooms & Ingots", description: "Semi-finished steel feedstock for re-rolling mills." },
+      { name: "Aluminium Ingots, Coils & Profiles", description: "Primary aluminium ingots, coils and extruded profiles for industry." },
+      { name: "Copper Cathodes & Wire", description: "LME-grade copper cathodes, rods and wire for electrical manufacturing." },
+      { name: "Steel Scrap (HMS 1&2, Shredded)", description: "HMS 1&2 and shredded scrap supplied to induction and arc furnace buyers." },
+    ],
+  },
+  {
+    id: "bitumen",
+    label: "Bitumen & Petro Products",
+    blurb: "Penetration and viscosity grade bitumen, emulsions and base oils.",
+    intro:
+      "Road-construction and industrial bitumen in penetration, viscosity and performance grades, plus cutbacks, emulsions, bitumen membranes and base oils — supplied in new steel drums, jumbo bags, bulk tankers and bitutainers.",
+    image: bitumenImg,
+    origin: "India · UAE · Bahrain · Iran-free origins · Singapore",
+    packing: [
+      "150 kg / 180 kg new steel drums",
+      "1 MT poly-coated jumbo bags",
+      "Bulk tankers and bitutainers",
+      "ISO tank containers",
+    ],
+    applications: [
+      "Highway and road construction",
+      "Airport runways and industrial paving",
+      "Waterproofing and roofing membranes",
+      "Industrial and lubricant blending",
+    ],
+    baseSpecs: [
+      { label: "Standards", value: "ASTM D946 / EN 12591 / AASHTO" },
+      { label: "Testing", value: "Penetration, softening point, ductility reports" },
+      { label: "Certification", value: "SGS / independent lab analysis on request" },
+      { label: "Loading", value: "Drums, jumbo bags, bulk tanker, bitutainer" },
+      { label: "Minimum order", value: "One 20 ft FCL / 20 MT" },
+      { label: "Trade terms", value: "FOB / CFR / CIF" },
+    ],
+    highlights: [
+      "Refinery-linked supply with lab test reports",
+      "Drummed, jumbo-bag and bulk loading options",
+      "Documentation and MSDS provided with every shipment",
+    ],
+    items: [
+      { name: "Bitumen 60/70", description: "Most widely used penetration-grade bitumen for hot-mix asphalt and road surfacing in warm climates." },
+      { name: "Bitumen 80/100", description: "Softer penetration grade for cooler climates, surface dressing and premix carpeting." },
+      { name: "Bitumen 40/50", description: "Harder penetration grade for heavy-traffic pavements and high-temperature regions." },
+      { name: "Bitumen 30/40", description: "Stiff grade used in industrial applications and heavy-duty road bases." },
+      { name: "Viscosity Grade VG-10 / VG-30 / VG-40", description: "IS 73 viscosity-graded bitumen for paving, spraying and heavy-duty highways." },
+      { name: "Polymer Modified Bitumen (PMB)", description: "SBS and crumb-rubber modified bitumen for high-performance, long-life pavements." },
+      { name: "Cutback Bitumen (MC / RC)", description: "Solvent-cut bitumen for priming and tack coats on road bases." },
+      { name: "Bitumen Emulsion (SS / RS / CRS)", description: "Water-based cationic emulsions for cold-mix, tack coat and surface dressing." },
+      { name: "Oxidised / Blown Bitumen (85/25, 90/15, 115/15)", description: "Industrial blown grades for roofing felt, pipe coating and waterproofing." },
+      { name: "Bitumen Waterproofing Membranes", description: "APP and SBS torch-applied membrane rolls for roof and basement waterproofing." },
+      { name: "Base Oils (SN 150 / SN 500)", description: "Group I and II base oils for lubricant blending and industrial formulations." },
+      { name: "Petroleum Jelly & Paraffin Wax", description: "Refined wax and jelly grades for candle, cosmetic and packaging industries." },
     ],
   },
 ];
