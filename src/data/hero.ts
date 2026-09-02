@@ -3,6 +3,7 @@ import agriImg from "@/assets/hero-agri-field.jpg";
 import machineryImg from "@/assets/hero-machinery.jpg";
 import warehouseImg from "@/assets/hero-warehouse.jpg";
 import equipmentImg from "@/assets/hero-equipment.jpg";
+import steelBitumenImg from "@/assets/hero-steel-bitumen.jpg";
 
 export type HeroSlide = {
   id: string;

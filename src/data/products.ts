@@ -19,6 +19,9 @@ import teaCoffeeImg from "@/assets/cat-tea-coffee.jpg";
 import herbalImg from "@/assets/cat-herbal.jpg";
 import frozenImg from "@/assets/cat-frozen.jpg";
 import saltImg from "@/assets/cat-salt.jpg";
+import paperImg from "@/assets/cat-paper.jpg";
+import steelImg from "@/assets/cat-steel.jpg";
+import bitumenImg from "@/assets/cat-bitumen.jpg";
 
 export type Spec = { label: string; value: string };
 
