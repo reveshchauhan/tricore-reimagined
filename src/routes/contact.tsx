@@ -1,6 +1,6 @@
 import { useState, type FormEvent } from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone, ReceiptText } from "lucide-react";
 import { toast } from "sonner";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { company, leadership } from "@/data/company";
@@ -73,7 +73,11 @@ function ContactPage() {
               </span>
             </li>
             <li className="flex gap-4">
-              <Phone className="mt-0.5 size-5 shrink-0 text-saffron" aria-hidden="true" />
+              <Phone
+                className="mt-0.5 size-5 shrink-0 text-saffron"
+                aria-hidden="true"
+              />
+
               <span className="flex flex-col gap-1">
                 {leadership.map((l) => (
                   <a
@@ -86,6 +90,16 @@ function ContactPage() {
                 ))}
               </span>
             </li>
+            <li className="flex gap-4">
+              <span className="flex items-center gap-2 text-muted-foreground">
+                  <ReceiptText
+                    className="size-5 shrink-0 text-saffron"
+                    aria-hidden="true"
+                  />
+                  <span>GST: 06AAYFT8267E1ZG</span>
+                </span>
+            </li>
+
           </ul>
 
           <div className="mt-10 overflow-hidden rounded-lg border border-border">

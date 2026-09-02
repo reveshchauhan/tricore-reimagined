@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone, ReceiptText } from "lucide-react";
 import { services } from "@/data/services";
 import { company, leadership } from "@/data/company";
 import logo from "@/assets/logo.jpg";
@@ -91,8 +91,18 @@ export function Footer() {
               </li>
             ))}
             <li className="flex gap-3">
-              <Phone className="mt-0.5 size-4 shrink-0 text-saffron" aria-hidden="true"/>
+              <Phone className="mt-0.5 size-4 shrink-0 text-saffron" aria-hidden="true" />
               <a href="tel:+918953335110" className="hover:text-saffron"> +91 89533 35110 </a>
+            </li>
+
+            <li className="flex gap-3">
+              <ReceiptText
+                className="mt-0.5 size-4 shrink-0 text-saffron"
+                aria-hidden="true"
+              />
+              <span className="hover:text-saffron">
+                GST: 06AAYFT8267E1ZG
+              </span>
             </li>
           </ul>
         </div>

@@ -20,9 +20,58 @@ export type Service = {
 };
 
 export const services: Service[] = [
+
   {
-    slug: "civil-construction",
+    slug: "import-export",
     index: "01",
+    eyebrow: "Import & Export",
+    name: "Import-Export Services",
+    heroTitle: "Global Trade Solutions Connecting Markets Worldwide",
+    heroLead:
+      "Seamless import and export services with expertise in logistics, customs clearance and international trade regulations to expand your business globally.",
+    cta: "Contact Us",
+    summary:
+      "Streamlined import-export solutions with logistics expertise, customs clearance and international trade management.",
+    image: tradeImg,
+    overview:
+      "We connect global buyers with quality Indian produce and industrial goods — handling sourcing, inspection, documentation and shipment so every consignment lands as promised.",
+    capabilities: [
+      "Global sourcing and dependable procurement",
+      "Export documentation and customs clearance",
+      "Container booking, freight and logistics",
+      "Pre-shipment inspection and quality checks",
+      "Packing and labelling to buyer specification",
+      "End-to-end trade support and coordination",
+    ],
+  },
+
+  {
+    slug: "trading",
+    index: "02",
+    eyebrow: "Trading Activities",
+    name: "Trading Activities",
+    heroTitle: "Strategic Trading Solutions For Business Growth",
+    heroLead:
+      "Comprehensive trading services in commodities, industrial supplies and equipment with competitive pricing, quality assurance and timely delivery.",
+    cta: "Get Started",
+    summary:
+      "Comprehensive trading in commodities, industrial supplies and equipment with competitive pricing and quality assurance.",
+    image: tradingImg,
+    overview:
+      "Our trading desk works on transparent commercials and verified supply lines across agricultural commodities, industrial raw materials and equipment.",
+    capabilities: [
+      "Agricultural commodity trading",
+      "Industrial raw materials and supplies",
+      "Equipment sourcing and supply",
+      "Competitive, transparent pricing",
+      "Quality assurance before dispatch",
+      "Reliable delivery scheduling",
+    ],
+  },
+
+  /*{
+    slug: "civil-construction",
+    index: "03",
     eyebrow: "Civil Construction",
     name: "Civil Construction",
     heroTitle: "Building Strong Foundations With Expert Civil Construction",
@@ -45,7 +94,7 @@ export const services: Service[] = [
   },
   {
     slug: "solar-plant-systems",
-    index: "02",
+    index: "04",
     eyebrow: "Solar Energy Solutions",
     name: "Solar Plant Systems",
     heroTitle: "Power Your Future With Advanced Solar Technology",
@@ -68,7 +117,7 @@ export const services: Service[] = [
   },
   {
     slug: "it-support",
-    index: "03",
+    index: "05",
     eyebrow: "IT Tech Support",
     name: "IT Support Services",
     heroTitle: "Reliable IT Solutions For Your Digital Success",
@@ -88,33 +137,11 @@ export const services: Service[] = [
       "Backup, recovery and business continuity",
       "24/7 incident response",
     ],
-  },
-  {
-    slug: "import-export",
-    index: "04",
-    eyebrow: "Import & Export",
-    name: "Import-Export Services",
-    heroTitle: "Global Trade Solutions Connecting Markets Worldwide",
-    heroLead:
-      "Seamless import and export services with expertise in logistics, customs clearance and international trade regulations to expand your business globally.",
-    cta: "Contact Us",
-    summary:
-      "Streamlined import-export solutions with logistics expertise, customs clearance and international trade management.",
-    image: tradeImg,
-    overview:
-      "We connect global buyers with quality Indian produce and industrial goods — handling sourcing, inspection, documentation and shipment so every consignment lands as promised.",
-    capabilities: [
-      "Global sourcing and dependable procurement",
-      "Export documentation and customs clearance",
-      "Container booking, freight and logistics",
-      "Pre-shipment inspection and quality checks",
-      "Packing and labelling to buyer specification",
-      "End-to-end trade support and coordination",
-    ],
-  },
-  {
+  },*/
+  
+  /*{
     slug: "work-contract",
-    index: "05",
+    index: "06",
     eyebrow: "Contract Services",
     name: "Work Contract Services",
     heroTitle: "Professional Workforce Management Solutions",
@@ -134,30 +161,8 @@ export const services: Service[] = [
       "Safety induction and training",
       "Flexible short and long-term contracts",
     ],
-  },
-  {
-    slug: "trading",
-    index: "06",
-    eyebrow: "Trading Activities",
-    name: "Trading Activities",
-    heroTitle: "Strategic Trading Solutions For Business Growth",
-    heroLead:
-      "Comprehensive trading services in commodities, industrial supplies and equipment with competitive pricing, quality assurance and timely delivery.",
-    cta: "Get Started",
-    summary:
-      "Comprehensive trading in commodities, industrial supplies and equipment with competitive pricing and quality assurance.",
-    image: tradingImg,
-    overview:
-      "Our trading desk works on transparent commercials and verified supply lines across agricultural commodities, industrial raw materials and equipment.",
-    capabilities: [
-      "Agricultural commodity trading",
-      "Industrial raw materials and supplies",
-      "Equipment sourcing and supply",
-      "Competitive, transparent pricing",
-      "Quality assurance before dispatch",
-      "Reliable delivery scheduling",
-    ],
-  },
+  }*/
+  
 ];
 
 export const getService = (slug: string) => services.find((s) => s.slug === slug);
